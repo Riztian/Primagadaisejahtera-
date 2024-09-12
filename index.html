@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Registration Form</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="icon" type="imege/jpg" href="/pgs2/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="style.css" />
+  </head> 
+  <body>
+    <div class="container">
+      <img src="pgs1.jpg" width="250" height="100" alt="PGS" style="display:block; margin:auto;"/>
+      <h1 class="form-title">FORM APLIKASI PERMOHONAN PINJAMAN </h1></p>
+      <form action="#">
+        <div class="main-user-info">
+          <div class="user-input-box">
+      <label for="">Nama :</label>
+      <input type="text" class="name"
+      placeholder="Masukan Anda"/>
+    </div>
+  
+    <div class="user-input-box">
+      <label for="">No. KTP Atau Identitas lainnya :</label>
+      <input type="text" class="email"
+      placeholder="Masukan No. KTP Atau Identitas lainnya "/>
+    </div>
+  
+    <div class="user-input-box">
+      <label for="">Alamat :</label>
+      <input type="text" class="country"
+      placeholder="Masukan Alamat Anda"/>
+    </div>
+  
+    <div class="user-input-box">
+      <label for="">Pekerjaan Dan No.HP :</label>
+      <input type="text" class="gender"    
+       placeholder="Masukan Pekerjaan Dan No.HP "/>
+     </div>
+  
+    <div class="user-input-box">
+      <label for="">Tujuan Penggunaan Dana :</label>
+      <input type="text" class="message"
+      placeholder="Masukan Tujuan Penggunaan Dana"/>
+      </div>
+
+    <div class="user-input-box">
+      <label for="">Barang Jaminan :</label>
+      <input type="text" class="message"
+      placeholder="Masukan Barang Jaminan"/>
+      </div>
+      <p>
+        <div class="form-submit-btn">
+          <input type="button"  value="Daftar" onclick="sendwhatsapp();">
+      </p>
+    </form>
+
+    <script>
+      function sendwhatsapp(){
+       var phonenumber = "+6285355365550";
+
+       var name = document.querySelector(".name").value;
+       var email = document.querySelector(".email").value;
+       var country = document.querySelector(".country").value;
+       var gender = document.querySelector(".gender").value;
+       var message = document.querySelector(".message").value;
+
+       var url = "https://wa.me/" + phonenumber + "?text="
+       +"*Nama :* "+name+"%0a"
+       +"*No. KTP Atau Identitas lainnya :* "+email+"%0a"
+       +"*Alamat:* "+country+"%0a"
+       +"*Pekerjaan Dan No.HP:* "+gender+"%0a"
+       +"*Barang Jaminan :* "+gender+"%0a"
+       +"*Tujuan Penggunaan Dana :* "+message
+       +"%0a%0a"
+       +"FORMULIR VERIFIKASI NASABAH GADAI";
+
+       window.open(url, '_blank').focus();
+     } 
+    </script>
+  </body>
+</html>
